@@ -1,4 +1,5 @@
 import './CardIte.css'
+import coverImg from '/img/cover.png'
 
 const CardItem = ({card, handleChoise, flipped, disabled}) => {
 
@@ -12,11 +13,11 @@ const CardItem = ({card, handleChoise, flipped, disabled}) => {
     <div className="card">
       <div className={flipped ? 'flipped' : ''}>
         <img 
-          src={`./src/${card.src}`} 
+          src={card.src} 
           alt="card front"  
           className="front"/>
         <img 
-          src='./src/img/cover.png' 
+          src={coverImg}
           alt="card cover"  
           className="back" 
           onClick={() => handleClick(card)}/>
